@@ -90,11 +90,13 @@ const sidebars = {
       label: 'Quizzes',
       collapsed: false,
       items: [
+        'quizzes/quiz-ldap',
         'quizzes/quiz-networking',
         'quizzes/quiz-windows',
         'quizzes/quiz-linux',
         'quizzes/quiz-devfullstack',
         'quizzes/quiz-general',
+        'quizzes/quiz-ldap'
       ],
     },
   ],

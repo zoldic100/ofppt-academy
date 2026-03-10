@@ -34,6 +34,8 @@ const config = {
           routeBasePath: '/',
           showLastUpdateTime: true,
           showLastUpdateAuthor: true,
+          remarkPlugins: [],
+          rehypePlugins: [],
         },
         blog: false,
         theme: {
