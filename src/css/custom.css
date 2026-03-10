@@ -101,6 +101,24 @@
   color: var(--ifm-navbar-link-hover-color);
 }
 
+.aa-DetachedSearchButtonPlaceholder {
+  display: none !important;
+}
+
+.aa-DetachedSearchButton {
+  background: transparent !important;
+  border: none !important;
+  padding: 4px !important;
+  width: 36px !important;
+}
+
+.aa-SubmitIcon{
+  color:white
+}
+
+.clean-btn svg{
+  color:white
+}
 /* ============================================================
    SIDEBAR STYLING
    ============================================================ */

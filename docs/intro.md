@@ -1,45 +1,73 @@
 ---
 id: intro
-title: Welcome to OFPPT Tech Academy
-sidebar_label: Home
+title: Accueil
+sidebar_label: Accueil
 slug: /
 ---
 
 # OFPPT Tech Academy
 
-**Your Professional IT Learning Platform**
+### Plateforme d’apprentissage IT pour les étudiants de l’OFPPT
 
-Created by **Omar Maarouf** | Platform: Docusaurus 3.0 | Hosted on Vercel
+**OFPPT Tech Academy** est une plateforme éducative dédiée aux étudiants qui souhaitent apprendre, pratiquer et maîtriser les technologies informatiques essentielles : réseaux, administration systèmes et développement web.
 
----
-
-## Available Courses
-
-| Course | Lessons | Level |
-|--------|---------|-------|
-| Conception Reseau | 10 | Intermediate |
-| Administration Windows | 8 | Intermediate |
-| Administration Linux | 8 | Intermediate |
-| Dev Full Stack | 9 | Beginner to Advanced |
+Créée par **Omar Maarouf**, cette plateforme regroupe des **cours structurés, des commandes essentielles et des quiz** pour faciliter l’apprentissage et la pratique.
 
 ---
 
-## Quick Navigation
+## Objectifs de la plateforme
 
-- **IDOSR Track** - Networking, Windows Administration, Linux Administration
-- **Dev Full Stack** - HTML/CSS, JavaScript, React, Node.js, Databases
-- **Quizzes** - Test your knowledge after each course
-- **Quick Reference** - Command cheatsheets and quick guides
-
----
-
-## Platform Information
-
-- **Cost:** Free (Docusaurus + GitHub + Vercel)
-- **Language:** French
-- **Dark Mode:** Enabled by default
-- **Mobile:** Fully responsive
+- Fournir des **cours clairs et structurés**
+- Centraliser les **commandes et références techniques**
+- Permettre aux étudiants de **pratiquer avec des quiz**
+- Aider à développer des **compétences pratiques en IT**
 
 ---
 
-*Select a course from the sidebar to get started.*
+## Parcours disponibles
+
+| Parcours | Contenu | Niveau |
+|---------|---------|-------|
+| **Conception Réseau** | Architecture réseau, VLAN, routage, services réseau | Intermédiaire |
+| **Administration Windows** | Active Directory, DNS, DHCP, gestion des utilisateurs | Intermédiaire |
+| **Administration Linux** | Commandes Linux, services, gestion des serveurs | Intermédiaire |
+| **Développement Full Stack** | HTML, CSS, JavaScript, React, Node.js, bases de données | Débutant → Avancé |
+
+---
+
+## Navigation rapide
+
+### Parcours 
+
+### Ressources supplémentaires
+- **Quiz interactifs** pour tester vos connaissances  
+- **Commandes essentielles** (cheatsheets)  
+- **Guides rapides** pour la configuration des services  
+
+---
+
+## Fonctionnalités de la plateforme
+
+- Plateforme **rapide et moderne**
+- **Mode sombre** activé par défaut
+- Interface **adaptée aux mobiles**
+- Documentation **simple et structurée**
+
+---
+
+## Informations techniques
+
+| Technologie | Utilisation |
+|-------------|-------------|
+| **Docusaurus 3** | Framework de documentation |
+| **GitHub** | Gestion du code |
+| **Vercel** | Hébergement et déploiement |
+| **Markdown** | Création des cours |
+
+---
+
+## Commencer l’apprentissage
+
+Sélectionnez un **cours dans la barre latérale** pour commencer votre apprentissage et progresser étape par étape dans le monde de l’informatique.
+
+**Apprendre. Pratiquer. Maîtriser.**

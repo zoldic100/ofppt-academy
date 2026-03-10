@@ -44,6 +44,15 @@ const config = {
       },
     ],
   ],
+  plugins: [
+    [
+      "@cmfcmf/docusaurus-search-local",
+      {
+        language: "fr",
+        indexBlog: false,
+      },
+    ],
+  ],
 
   themeConfig: {
     colorMode: {
@@ -76,7 +85,7 @@ const config = {
           type: 'docSidebar',
           sidebarId: 'quizzesSidebar',
           position: 'left',
-          label: 'Quizzes',
+          label: 'Test',
         },
         {
           type: 'docSidebar',

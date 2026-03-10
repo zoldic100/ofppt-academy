@@ -12,7 +12,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'Conception Reseau',
-      collapsed: false,
+      collapsed: true,
       items: [
         'idosr/networking/intro',
         'idosr/networking/lesson-01',
@@ -60,6 +60,10 @@ const sidebars = {
         'idosr/linux/lesson-06',
         'idosr/linux/lesson-07',
         'idosr/linux/lesson-08',
+        'idosr/linux/lesson-09',
+        'idosr/linux/lesson-10',
+        'idosr/linux/lesson-11',
+        'idosr/linux/lesson-12',
       ],
     },
   ],
@@ -68,7 +72,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'Dev Full Stack',
-      collapsed: false,
+      collapsed: true,
       items: [
         'devfullstack/intro',
         'devfullstack/lesson-01',
@@ -88,7 +92,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'Quizzes',
-      collapsed: false,
+      collapsed: true,
       items: [
         'quizzes/quiz-ldap',
         'quizzes/quiz-networking',
@@ -105,7 +109,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'Quick Reference',
-      collapsed: false,
+      collapsed: true,
       items: [
         'reference/commands-linux',
         'reference/commands-windows',
