@@ -563,14 +563,13 @@ nmap 192.168.1.0/24
 
 </TabItem>
 </Tabs>
-
 ---
-
 ## 8. SSH — Secure Shell
+
+**SSH (Secure Shell)** est un protocole de communication securise qui remplace les anciens protocoles non chiffres.
 
 <Tabs groupId="linux-distros">
 <TabItem value="ubuntu" label="Ubuntu / Debian">
-
 ```bash
 # Installer SSH
 sudo apt install openssh-server -y
@@ -588,7 +587,6 @@ ssh omar@192.168.7.10
 
 </TabItem>
 <TabItem value="fedora" label="Fedora / Red Hat">
-
 ```bash
 # Installer SSH
 sudo dnf install openssh-server -y
@@ -603,14 +601,71 @@ systemctl status sshd
 # Connexion depuis un client
 ssh omar@192.168.7.10
 ```
-
 </TabItem>
 </Tabs>
+
+### Commandes SSH et leurs rôles
+| Commande | Role | Remplace |
+|----------|------|---------|
+| `sshd` | Demon SSH — logiciel serveur actif sur le port TCP 22 | — |
+| `ssh` | Connexion et execution de commandes a distance | `rlogin`, `rsh` |
+| `scp` | Copier un fichier a distance de maniere securisee | `rcp` |
+| `ssh-keygen` | Generer un couple de cles publique/privee (RSA ou DSA) | — |
+
+### Exemples scp
+```bash
+# Copier un fichier local vers un serveur distant
+scp fichier.txt omar@192.168.7.10:/home/omar/
+
+# Copier un fichier distant vers la machine locale
+scp omar@192.168.7.10:/home/omar/fichier.txt /tmp/
+
+# Copier un dossier entier (recursif)
+scp -r dossier/ omar@192.168.7.10:/home/omar/
+```
+
+### Authentification par cles (cryptage asymetrique RSA/DSA)
+
+SSH supporte deux methodes d authentification :
+- **Mot de passe** — simple mais moins securise
+- **Cle publique/privee** — plus securise, sans mot de passe
+
+**Principe du cryptage asymetrique :**
+```
+Etape 1 : Le client SSH genere un couple de cles publique/privee
+          ssh-keygen -t rsa
+
+Etape 2 : Le client transfert sa cle publique vers le serveur SSH
+          ssh-copy-id omar@192.168.7.10
+
+Etape 3 : Le client se connecte — le serveur verifie la cle publique
+          ssh omar@192.168.7.10
+          (connexion sans mot de passe)
+```
+```bash
+# Generer un couple de cles RSA
+ssh-keygen -t rsa -b 4096
+
+# Les cles sont stockees dans
+# ~/.ssh/id_rsa        <- cle privee (ne jamais partager)
+# ~/.ssh/id_rsa.pub    <- cle publique (a copier sur le serveur)
+
+# Copier la cle publique sur le serveur
+ssh-copy-id omar@192.168.7.10
+
+# Se connecter sans mot de passe
+ssh omar@192.168.7.10
+```
+
+> **Important :** La cle privee ne doit jamais quitter la machine cliente. Seule la cle publique est copiee sur le serveur dans `~/.ssh/authorized_keys`.
+
+
+
+
 
 ### Securisation SSH (base)
 
 Fichier de configuration : `/etc/ssh/sshd_config`
-
 ```
 PermitRootLogin no
 PasswordAuthentication yes
@@ -618,7 +673,6 @@ PasswordAuthentication yes
 
 <Tabs groupId="linux-distros">
 <TabItem value="ubuntu" label="Ubuntu / Debian">
-
 ```bash
 sudo systemctl restart ssh
 systemctl status ssh
@@ -626,7 +680,6 @@ systemctl status ssh
 
 </TabItem>
 <TabItem value="fedora" label="Fedora / Red Hat">
-
 ```bash
 sudo systemctl restart sshd
 systemctl status sshd
@@ -636,6 +689,8 @@ systemctl status sshd
 </Tabs>
 
 ---
+
+
 
 ## 9. Gestion Utilisateurs et Groupes
 

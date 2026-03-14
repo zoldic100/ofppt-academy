@@ -107,6 +107,7 @@ const sidebars = {
           'quizzes/linux/quizz-00-les-commandes-de-base',
           'quizzes/linux/ConfigurationDeBaseLinuxServer',
           'quizzes/linux/quizzDhcp',
+          'quizzes/linux/quizzDNS',
           'quizzes/linux/quiz-ldap',
           'quizzes/linux/quiz-linux',
 
@@ -117,16 +118,15 @@ const sidebars = {
   },
 ],
 
-  referenceSidebar: [
+  TpSidebar: [
     {
       type: 'category',
-      label: 'Quick Reference',
+      label: 'TP',
       collapsed: true,
       items: [
-        'reference/commands-linux',
-        'reference/commands-windows',
-        'reference/networking-cheatsheet',
-        'reference/git-cheatsheet',
+        'TP/linux/tp-lesson-00',
+        'TP/linux/commands-linux',
+
       ],
     },
   ],

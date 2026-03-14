@@ -52,20 +52,17 @@ Avant toute chose, il est essentiel de comprendre l'arborescence Linux. Contrair
 | `/sbin` | Binaires systeme essentiels (admin) | `fdisk`, `mkfs`, `ifconfig`, `reboot` |
 | `/usr` | Programmes et bibliotheques utilisateurs | `/usr/bin/`, `/usr/lib/`, `/usr/share/` |
 | `/usr/local` | Logiciels installes manuellement | `/usr/local/bin/`, `/usr/local/etc/` |
-| `/opt` | Logiciels tiers/additionnels optionnels | `/opt/google/`, `/opt/lampp/` |
 | `/tmp` | Fichiers temporaires (effaces au redemarrage) | Fichiers de session, caches temporaires |
 | `/var` | Donnees variables (logs, spools, caches) | `/var/mail/`, `/var/spool/`, `/var/cache/` |
 | `/var/www` | Racine web par defaut (Apache/Nginx) | `html/`, sites web |
 | `/boot` | Fichiers de demarrage du systeme | Kernel (`vmlinuz`), GRUB, initramfs |
 | `/dev` | Fichiers de peripheriques | `sda`, `tty`, `null`, `random`, `zero` |
-| `/proc` | Pseudo-systeme de fichiers - infos sur les processus | Infos noyau en temps reel |
-| `/sys` | Interface noyau pour materiel et drivers (virtuel) | `/sys/class/net/`, `/sys/block/` |
 | `/media` | Points de montage pour medias amovibles | Cles USB, CD-ROM (auto-montage) |
 
 ### Hierarchie FHS (Filesystem Hierarchy Standard)
 
-- **Statique** (`/bin`, `/sbin`, `/lib`, `/usr`, `/opt`) → Lecture seule, partageable
-- **Variable** (`/var`, `/tmp`, `/run`) → Ecriture frequente, locale
+- **Statique** (`/bin`, `/sbin`, `/lib`, `/usr` ) → Lecture seule, partageable
+- **Variable** (`/var`, `/tmp`) → Ecriture frequente, locale
 - **Configuration** (`/etc`) → Locale, admin uniquement
 - **Home** (`/home`, `/root`) → Donnees utilisateurs
 
@@ -160,8 +157,27 @@ mkdir rep1 rep2 rep3
 
 # Creer une arborescence complexe
 mkdir -p public/docs/html public/src/cpp
-```
 
+mkdir -p public/{docs/html,src/cpp}
+
+mkdir -p /home/{omar/{documents,telechargements,bureau},said/{documents/{cours,projets},images/{photos,captures}}}
+
+# Resultat :
+
+tree
+/home/
+├── omar/
+│   ├── documents/
+│   ├── telechargements/
+│   └── bureau/
+└── said/
+    ├── documents/
+    │   ├── cours/
+    │   └── projets/
+    └── images/
+        ├── photos/
+        └── captures/
+``````
 ### `rmdir` - Supprimer un repertoire vide
 
 Signification : *remove directory*. Equivalent Windows : `rmdir` / `rd`
@@ -632,9 +648,10 @@ cat /proc/ioports            # Affiche les ports d'entree/sortie utilises
 | `>>` | `commande >> fichier` | Redirection (ajoute en fin) |
 | `\|` | `cmd1 \| cmd2` | Pipe : chainer les commandes |
 
-:::tip Quiz disponible
+:::TP et Quiz disponible
 
 Testez vos connaissances sur cette lecon :
-[Faire le quiz →](/quizzes/linux/quizz-00-les-commandes-de-base)
+### Quizzes: [Faire le quiz ](/quizzes/linux/quizz-00-les-commandes-de-base)
+### TP: [Faire les TP ](/TP/linux/tp-lesson-00)
 
 :::

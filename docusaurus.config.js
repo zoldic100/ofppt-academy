@@ -89,9 +89,9 @@ const config = {
         },
         {
           type: 'docSidebar',
-          sidebarId: 'referenceSidebar',
+          sidebarId: 'TpSidebar',
           position: 'left',
-          label: 'Reference',
+          label: 'TP',
         },
         {
           href: 'https://github.com/omar-maarouf/ofppt-academy',

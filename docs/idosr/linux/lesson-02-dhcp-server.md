@@ -1,7 +1,7 @@
 ---
 id: lesson-02
-title: DHCP SERVER
-sidebar_label: DHCP SERVER
+title: Serveur DHCP
+sidebar_label: Serveur DHCP
 ---
 
 import Tabs from '@theme/Tabs';
