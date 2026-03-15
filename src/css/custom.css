@@ -100,7 +100,9 @@
 .navbar__item.navbar__link:hover {
   color: var(--ifm-navbar-link-hover-color);
 }
-
+.navbar__brand {
+  margin-right: 0 !important;
+}
 .aa-DetachedSearchButtonPlaceholder {
   display: none !important;
 }
